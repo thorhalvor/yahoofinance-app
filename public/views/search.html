@@ -1,0 +1,27 @@
+<form name="form" id="form">
+<div id="container">
+<div class="form-group">
+ 	<label for="searchInput">Search for ticker</label>
+ 	<div class="input-group">
+ 	<input id="searchInput" class="form-control" type="search" placeholder="write tickername here">
+ 	<span class="input-group-btn">
+        <button id="btnSearch" class="btn btn-default" type="button">Search</button>
+      </span>
+      </div>
+ 	</div>
+
+ 	<table class="table table-striped">
+    <thead>
+        <tr><th>Symbol</th><th>Name</th><th>Exchange</th></tr>
+    </thead>
+    <tbody data-bind="foreach: tickers">
+        <tr>
+            <td data-bind="text: symbol"></td>
+            <td data-bind="text: name"></td>
+            <td data-bind="text: exchDisp"></td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
+</form>

@@ -1,41 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
-    <link rel='stylesheet' href='/stylesheets/jquery-ui-1.10.3.custom.min.css' />
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-
-    <script data-main="javascripts/app" src="javascripts/lib/require.js"></script>
-    </script>
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-
-    <div class="form-group">
- 	<label for="searchInput">Search for ticker</label>
- 	<div class="input-group">
- 	<input id="searchInput" class="form-control" type="search" placeholder="write tickername here">
- 	<span class="input-group-btn">
-        <button id="btnSearch" class="btn btn-default" type="button">Search</button>
-      </span>
-      </div>
- 	</div>
-
- 	<table class="table table-striped">
-    <thead>
-        <tr><th>Symbol</th><th>Name</th><th>Exchange</th></tr>
-    </thead>
-    <tbody data-bind="foreach: tickers">
-        <tr>
-            <td data-bind="text: symbol"></td>
-            <td data-bind="text: name"></td>
-            <td data-bind="text: exchDisp"></td>
-        </tr>
-    </tbody>
-</table>
-
-
-  </body>
+    <head>
+        <title>YahooFinance App</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+        <link rel="stylesheet" href="js/lib/bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="js/lib/durandal/css/durandal.css" />        
+        <link rel='stylesheet' href='js/lib/jquery/css/jquery-ui-1.10.3.custom.min.css' />
+        <link rel="stylesheet" href="css/shell.css" /> 
+    </head>
+    <body>
+        <div id="applicationHost">          
+        </div>
+        <script src="js/lib/require/require.js" data-main="main"></script>
+    </body>
 </html>
